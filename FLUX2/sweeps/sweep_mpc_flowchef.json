@@ -1,0 +1,62 @@
+{
+  "base_args": {
+    "reward": "style",
+    "run_dir_template": "output/sweep/{method}/{reward}/style={style_image_name}/lr={effective_lr}/its={opt_steps}/rho={mpc_rho}"
+  },
+  "output_name_template": "{prompt_prefix}.png",
+  "grid": {
+    "prompt": [
+      "a cat",
+      "a landscape",
+      "a portrait",
+      "a dog",
+      "two lizards wearing fedoras"
+    ],
+    "style_image": [
+      "style_images/1.png",
+      "style_images/bijiasuo.jpeg",
+      "style_images/bw.jpg",
+      "style_images/jojo.jpeg",
+      "style_images/nahan.jpeg",
+      "style_images/tan.jpg",
+      "style_images/xiangrikui.jpg",
+      "style_images/xing.jpg",
+      "style_images/xingkong.jpg"
+    ],
+    "method": [
+      "mpc",
+      "flowchef"
+    ],
+    "opt_steps": [
+      0,
+      20
+    ],
+    "mpc_lr": [
+      0.5
+    ],
+    "flowchef_lr": [
+      0.0005,
+      0.001,
+      0.025,
+      0.005,
+      0.01,
+      0.025,
+      0.05,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "mpc_rho": [
+      0.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0,
+      256.0,
+      512.0,
+      1024.0
+    ]
+  }
+}

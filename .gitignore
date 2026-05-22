@@ -1,3 +1,68 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.cache/
 
+# Python packaging/build artifacts
+*.egg-info/
+build/
+dist/
+*.egg
+MANIFEST
 
-*.pyc
+# Local environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter/IPython local state
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# Generated MPC-Flow outputs and caches
+output/
+results/
+cache/
+FLUX2/output/
+FLUX2/results/
+FLUX2/cache/
+2DHexagon/output/
+2DHexagon/results/
+
+# Local model weights/checkpoints should not be committed
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.bin
+!2DHexagon/mlp_hexagon.pt
+
+# Downloaded/generated CLIP asset
+FLUX2/clip/clip/bpe_simple_vocab_16e6.txt.gz
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.stackdump
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/

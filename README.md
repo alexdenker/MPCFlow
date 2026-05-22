@@ -1,25 +1,35 @@
-# Solving Inverse Problems with Flow-based Models via Model Predictive Control
+# MPC-Flow
 
-Official implementation of the paper  
-📄 *Solving Inverse Problems with Flow-based Models via Model Predictive Control*  
-by [**George Webber**](https://george-webber.com/), [**Alexander Denker**](https://alexdenker.github.io/), **Riccardo Barbano**, **Andrew J. Reader**
+Research code for **Solving Inverse Problems with Flow-based Models via Model Predictive Control** (accepted to **ICML 2026**).
 
+This repository is organized by experiment family:
 
-> Flow-based generative models provide strong unconditional priors for inverse problems, but guiding their dynamics for conditional generation remains challenging. Recent work casts training-free conditional generation in flow models as an optimal control problem; however, solving the resulting trajectory optimisation is computationally and memory intensive, requiring differentiation through the flow dynamics or adjoint solves.
->
->We propose **MPC-Flow**, a model predictive control framework that formulates inverse problem solving with flow-based generative models as a sequence of control sub-problems, enabling practical optimal control-based guidance at inference time. We provide theoretical guarantees linking MPC-Flow to the underlying optimal control objective and show how different algorithmic choices yield a spectrum of guidance algorithms, including regimes that avoid backpropagation through the generative model trajectory.
->
->We evaluate MPC-Flow on benchmark image restoration tasks, spanning linear and non-linear settings such as in-painting, deblurring, and super-resolution, and demonstrate strong performance and scalability to massive state-of-the-art architectures via training-free guidance of FLUX.2 (32B) in a quantised setting on consumer hardware.
+- [`FLUX2/`](FLUX2/): image inverse-problem demos with the large vision-language model FLUX.2 [dev].
+- [`2DHexagon/`](2DHexagon/): lightweight 2D flow-matching and MPC examples on a hexagon distribution.
 
----
+The large-scale image experiments from the paper use the FLUX.2 code path. Start there if you want to run style transfer, luminance-constrained colorization or super-resolution:
 
+```powershell
+cd FLUX2
+conda env create -f environment.yml
+conda activate mpcflow
+python -c "import flux2.mpc; print('FLUX2 imports ok')"
+```
+See [`FLUX2/README.md`](FLUX2/README.md) for FLUX.2-specific setup, Hugging Face model access, CLI commands, and notebook instructions.
 
 ## Paper
 
-**arXiv:** https://arxiv.org/abs/2601.23231
+- arXiv: https://arxiv.org/abs/2601.23231
 
+Authors:
+George Webber*^1^, Alexander Denker*^2^, Riccardo Barbano^2^, and Andrew J. Reader
 
-If you find this work useful, please cite:
+1. School of Biomedical Engineering and Imaging Sciences, King's College London
+2. Department of Computer Science, University College London
+
+\* Equal contribution.
+
+## Citation
 
 ```bibtex
 @article{webber2026solving,
@@ -29,3 +39,9 @@ If you find this work useful, please cite:
   year={2026}
 }
 ```
+
+## License
+
+Repository code license: [`LICENSE.md`](LICENSE.md).
+
+FLUX.2 model weights are not redistributed in this repository. FLUX.2 model use is governed separately by the model license in [`FLUX2/model_licenses/LICENSE-FLUX-DEV`](FLUX2/model_licenses/LICENSE-FLUX-DEV).

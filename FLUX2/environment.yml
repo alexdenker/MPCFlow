@@ -1,0 +1,41 @@
+name: mpcflow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - libblas=*=*openblas
+  - pip
+  - setuptools
+  - wheel
+  - ipykernel
+  - ipywidgets
+  - jupyterlab
+  - matplotlib=3.10.8
+  - numpy=2.4.3
+  - pandas
+  - pillow
+  - scipy
+  - scikit-image=0.26.0
+  - imageio
+  - tqdm
+  - ruff=0.6.8
+  - pip:
+      - --index-url https://pypi.org/simple
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.10.0+cu128
+      - torchvision==0.25.0+cu128
+      - torchaudio==2.10.0+cu128
+      - accelerate==1.13.0
+      - bitsandbytes==0.49.2
+      - diffusers==0.37.0
+      - einops==0.8.2
+      - fire==0.7.1
+      - ftfy==6.3.1
+      - huggingface_hub==1.7.2
+      - invisible-watermark==0.2.0
+      - lpips==0.1.4
+      - openai==2.8.1
+      - regex==2026.2.28
+      - safetensors==0.7.0
+      - tokenizers==0.22.2
+      - transformers==5.3.0

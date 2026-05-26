@@ -22,10 +22,12 @@ See [`FLUX2/README.md`](FLUX2/README.md) for FLUX.2-specific setup, Hugging Face
 - arXiv: https://arxiv.org/abs/2601.23231
 
 Authors:
-George Webber*<sup>1</sup>, Alexander Denker*<sup>2</sup>, Riccardo Barbano<sup>2</sup>, and Andrew J. Reader<sup>1</sup>
+George Webber
+*<sup>1</sup>, Alexander Denker\*<sup>2</sup>, Riccardo Barbano<sup>3</sup>, and Andrew J. Reader<sup>1</sup>
 
 1. School of Biomedical Engineering and Imaging Sciences, King's College London
-2. Department of Computer Science, University College London
+2. Helmholtz Imaging, Deutsches Elektronen-Synchrotron DESY, Germany
+3. Department of Computer Science, University College London
 
 \* Equal contribution.
 

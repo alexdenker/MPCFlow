@@ -22,7 +22,7 @@ See [`FLUX2/README.md`](FLUX2/README.md) for FLUX.2-specific setup, Hugging Face
 - arXiv: https://arxiv.org/abs/2601.23231
 
 Authors:
-George Webber*^1^, Alexander Denker*^2^, Riccardo Barbano^2^, and Andrew J. Reader
+George Webber*<sup>1</sup>, Alexander Denker*<sup>2</sup>, Riccardo Barbano<sup>2</sup>, and Andrew J. Reader<sup>1</sup>
 
 1. School of Biomedical Engineering and Imaging Sciences, King's College London
 2. Department of Computer Science, University College London
